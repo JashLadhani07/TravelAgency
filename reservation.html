@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reservation</title>
+    <link rel="stylesheet" href="reservation.css">
+    
+    <script>
+        function validateform(){
+            var Username = document.getElementById('fname').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var address = document.getElementById('address').value;
+            var last = document.getElementById('lname').value;
+            var zip = document.getElementById('zipcode').value;
+
+            if(Username===""){
+                alert("enter your first name");
+                return false;
+            }
+            else if(last === ""){
+                alert("enter last name");
+                return false;
+            }
+
+            else if(address === ""){
+                alert("enter valid phone number");
+                return false;
+            }
+
+            else if(email.indexOf('@')===-1||email.indexOf('.')===-1){
+                alert("Email invalid");
+                return false;               
+            }
+            else if(phone.length > 10||phone== isNaN(phone)){
+                alert("Invalid phone");
+                return false;
+            }
+            else if (zip>8){
+                alert("enter valid zipcode");
+                return false;
+            }
+
+         alert("Booking Confirmed");
+            return true;
+        }
+    </script>
+    <!-- <script>
+    function showAlert() {
+        var myText = "Your booking is confirmed";
+        alert (myText);
+    }
+    </script> -->
+       
+
+
+</head>
+<body>
+    <h1><b>BOOKING FORM</b></h1>
+    <form onsubmit="return validateform()" style="align-items: left;">
+    <label for="fname">First Name: </label>
+    <input type="text" id="fname" name="firstname" placeholder="enter your name">
+
+    <label for="lname">Last Name: </label>
+    <input type="text" id="lname" name="lastname" placeholder="enter last name">
+    <br><br>
+
+    <label for = "email">Email: </label>
+    <input type="email" id="email" placeholder="enter email">
+    <br><br>
+
+    <label for = "phone">Phone: </label>
+    <input type = "text" id = "phone" placeholder="phone number">
+    <br><br>
+
+    <label for = "address">Address: </label>
+    <input type="text" id = "address" placeholder="address">
+    <input type = "text" placeholder="address line 2"><br><br>
+    <input type = "text" placeholder="city">
+    <input type = "text" placeholder="state">
+    <input type = "text" placeholder="zipcode"><br><br>
+
+    <label for="adults">number of adults: </label>
+    <input type="number" min="1">
+    <br><br>
+
+    <label for="chidren">number of children: </label>
+    <input type="number" min="0">
+    <br><br>
+
+    <label for = "startdate"> start date: </label>
+    <input type="date">
+
+    <label for = "end-date"> end date: </label>
+    <input type="date" min="startdate">
+    <br><br>
+
+    <label for="from">From: </label>
+    <input type="text" id="from">
+
+    <label for = "to">To: </label>
+    <select name="countries" id = "countries">
+        <option value="india">India</option>
+        <option value="france">France</option>
+        <option value="Switzerland">Switzerland</option>
+        <option value="Italy">Italy</option>
+        <option value="Croatia">Croatia</option>
+        <option value="new zealand">New Zealand</option>
+        <option value="USA">USA</option>
+        <option value="Grrece">Greece</option>
+        <option value="peru">Peru</option>
+        <option value="Australia">Australia</option>
+        <option value="Turkey">Turkey</option>
+        <option value="Canada">Canada</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="Netherlands">Netherlands</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Norway">Norway</option>
+        <option value="Denmark">Denmark</option>
+        <option value="Finland">Finland</option>
+        <option value="Vietnam">Vietnam</option>
+        <option value="Spain">Spain</option>
+
+    </select>
+    <br><br>
+    
+    <label for = "transportation">Transportation to and from the hotel: </label><br>
+    <input type="radio" name = "ans" id = "yes">yes
+    <input type="radio" name = "ans" id = "no">no
+    <br><br>
+    
+    <label for = "insurance">Travel Insurance: </label><br>
+    <input type="radio" name = "radio" id = "yes">yes
+    <input type="radio" name = "radio" id = "no">no
+    <br><br>
+    <input type = "submit" value = "book"  onclick = "window.print()"/>
+    <!-- <button onclick="showAlert()">book</button> -->
+    </form>
+</body>
+</html>

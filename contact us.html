@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylec.css">
+    <script>
+        function myContact(){
+            var first = document.getElementById('fname').value;
+            var last = document.getElementById('lname').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('pn').value;
+            var textbox = document.getElementById('helphow').value;
+
+            if(first===""){
+              alert("Enter all fields"); 
+              return false;
+            }
+            else if(last===""){
+              alert("Enter all fields");
+              return false; 
+            }
+            else if(email===""){
+              alert("Enter all fields");
+              return false; 
+            }
+            else if(phone===""){
+              alert("Enter all fields");
+              return false; 
+            }
+            else if(textbox===""){
+              alert("Enter all fields"); 
+              return false;
+            }
+    }
+    </script>
+
+</head>
+<body>
+    <div class = "header" id="header">
+        <nav>
+          <ul>
+      <li><img src="FLYTHRU-removebg-preview.png" height="20px" width="300px" style="position: absolute;left: 10px;top: -75px;"></li>
+      <li><a href= "homepage.html" id="home"><b>Home</b></a></li>
+      <li><a href= "deals.html" id="deals"><b>Countries</b></a></li>
+      <li><a href= "contactus.html" id="contact"><b>Contact us</b></a></li>
+      <li><a href= "about us.html" id="about"><b>About us</b></a></li>
+      <li><a href= "reservation.html" id="reservation"><b>Reservation</b></a></li>
+      <li><a href= "login and register.html"> <img src="Login.png" height="75px" width="75px" style="position: absolute;right: 100px;top: 25px;"></a></li>
+  </ul>
+  </nav>
+  </div>
+
+  <body align="center">
+    <div class="bg-img">
+    <br><br>
+
+    <form onsubmit="return myContact()" action="homepage.html" class="container">
+        <h1 class="ex" style="font-family: Georgia, 'Times New Roman', Times, serif; color: rgb(2, 2, 103);"><center>C O N T A C T</center></h1>
+        <p><b>Email: flythru@gmail.com</b></p>
+        <p><b>Phone number: </b>9867188089</p>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" width="20" height="30">
+        <br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname"  width="20" height="30">
+        <br><br>
+        <label for="email">Email: </label>
+        <input type="text" id="email">
+        <br><br>
+        <label for="pn">Phone number: </label>
+        <input type="text" id="pn">
+        <br><br>
+        <label for="doubt">How may we help you?</label>
+        <br><br>
+        <textarea cols="40" rows="10" aria-invalid="false" placeholder="Help me understand how I can help you?" name="helphow"></textarea>
+        <br><br>
+        <input type="submit" value="send" id="submit">
+    
+    </form>
+</div>
+</body>
+</html>

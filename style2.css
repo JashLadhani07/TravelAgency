@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 18vh;
+    background-color: #0a2787;
+    background-blend-mode: multiply ;
+    background-position: center;
+    background-size: cover;
+    padding: 0 7%;
+    transition: background-image 1s;
+}
+/*Makes horizontal*/
+img{
+    height: auto;
+    max-width: 100%;
+}
+nav{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    display:flex;
+    align-items: center;
+}
+/* Removes pointers*/
+nav ul{
+    flex: 1; /*to align the text */
+    text-align: center;
+}
+/* Justfies horizontally*/
+nav ul li{
+    display: inline-block;
+    margin: 50px 40px;
+
+}
+/*Edit text*/
+nav ul li a{
+    text-decoration:solid;
+    font-size: 20px;
+    font-family: 'Georgia, 'Times New Roman', Times, serif';
+    color: #f0f4f6;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.mainc{
+    position: relative;
+    width: 650px;
+    height: 450px;
+    margin-top: 50px;
+    margin-left: 475px;
+    
+}
+
+.img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.overlay{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mainc:hover .img {
+    opacity: 0.3;
+  }
+  
+  .mainc:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    background-color: #0a2787;
+    color: white;
+    font-size: 18px;
+    padding: 16px 32px;
+    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  body{
+    background-image: url("Images/zMiscellaneous/Bg\ deals.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  footer {
+    background-color: #0a2787;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 0;
+}

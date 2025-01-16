@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  
+    <div class = "header" id="header">
+      <nav>
+        <ul>
+    <li><img src="FLYTHRU-removebg-preview.png" height="20px" width="300px" style="position: absolute;left: 10px;top: -75px;"></li>
+    <li><a href= "#" id="home"><b>Home</b></a></li>
+    <li><a href= "deals.html" id="deals"><b>Countries</b></a></li>
+    <li><a href= "contact us.html" id="contact"><b>Contact us</b></a></li>
+    <li><a href= "about us.html" id="about"><b>About us</b></a></li>
+    <li><a href= "reservation.html" id="reservation"><b>Reservation</b></a></li>
+    <li><a href= "login and register.html"> <img src="Login.png" height="75px" width="75px" style="position: absolute;right: 100px;top: 25px;"></a></li>
+</ul>
+</nav>
+</div>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="Images/India/India 5.jpg" style="height: 610px;width: 100%;">
+    <div class="text">
+      <h1>India</h1>
+      <button class="button buttonInd" onclick="location.href='India.html'">Know more</button>
+    </div>
+    
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/Switzerland/switzerland 4.jpg" style="height: 610px;width: 100%;">
+    <div class="text">
+      <h1>Switzerland</h1>
+      <button class="button buttonSwit" onclick="location.href='Switzerland.html'">Know more</button>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/France/France 1.jpg" style="height: 610px;width: 100%;">
+    <div class="text">
+      <h1>France</h1>
+      <button class="button buttonFrance" onclick="location.href='France.html'">Know more</button>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/Croatia/Croatia 1.jpg" style="height: 610px;width: 100%;">
+    <div class="text">
+      <h1>Croatia</h1>
+      <button class="button buttonCro" onclick="location.href='Croatia.html'">Know more</button>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/Italy/Italy 1.jpg" style="height: 610px;width: 100%;">
+    <div class="text">
+      <h1>Italy</h1>
+      <button class="button buttonItaly" onclick="location.href='Italy.html'">Know more</button>
+    </div>
+  </div>
+
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span> 
+  </div>
+  <div class="bestcountry">
+    <h1 style="padding: 10px;">Visit The Best Voted Country Now</h1>
+    <p style="color: rgb(183, 184, 184); padding:10px;font-size: 17px;">Our users from all over the world have voted Italy as the best country in the world.</p>
+    <br>
+    <!-- float used to align image and text besides each other -->
+    <img src="Images/Italy/Italy 2.jpg" style="width:500px;height: 300px;margin-left: 10px;margin-right: 20px;border-radius: 10px;float:left"> 
+    <h2>ITALY</h2>
+    <p style="color: rgb(183, 184, 184); padding:10px;font-size: 17px;">Landscapes that will take your breath away, rich history, and delicious food, <br>
+      your trip to Italy will be nothing short of unforgettable.</p>
+      <br>
+    <button class="button button1" onclick="location.href='Italy.html'">Know more</button>
+  </div>
+  <script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+  }
+  </script>
+  <br>
+  <br><br><br><br><br><br><br><br>
+  <footer>
+    <div class="container">
+        <p>&copy; 2023 FLYTHRU</p>
+        <p>For more information mail us at flythru@gmail.com<br> or Contact US: +918765449980
+        </p>
+    </div>
+</footer>
+</body>
+</html>
